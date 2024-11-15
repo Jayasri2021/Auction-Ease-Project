@@ -11,17 +11,6 @@ import com.ACS560.AuctionEase.entities.BidEntity;
 public class BidLoad 
 {
 
-//	@Value("${spring.datasource.url}")
-//    private String DB_URL;
-//	@Value("${spring.datasource.username}")
-//    private String USER;
-//	@Value("${spring.datasource.password}")
-//    private String PASSWORD;
-	
-//    private static final String DB_URL = "jdbc:mysql://localhost:3306/AuctionEase";
-//    private static final String USER = "root";
-//    private static final String PASSWORD = "Password321";
-
 	
 	@Value("${spring.datasource.url}")
 	private String DB_URL;

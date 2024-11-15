@@ -85,30 +85,3 @@ public interface AuctionUserRepository extends CrudRepository<AuctionUserEntity,
      */
     List<AuctionUserEntity> findByUsernameContains(String filter);
 }
-
-//import java.util.List;
-//import java.util.Optional;
-//
-//import org.springframework.data.jpa.repository.JpaRepository;
-//import org.springframework.stereotype.Repository;
-//
-//import com.ACS560.AuctionEase.entities.AuctionUserEntity;
-//
-//@Repository
-//public interface AuctionUserRepository extends JpaRepository<AuctionUserEntity, String>
-//{
-//	List<AuctionUserEntity> findAll();
-//	
-//    Optional<AuctionUserEntity> findByUsername(String username);
-//    
-//    boolean existsByUsername(String username);
-//    
-//    void deleteByUsername(String username);
-//    
-//    @SuppressWarnings("unchecked")
-//	AuctionUserEntity save(AuctionUserEntity aue);
-//    
-//	void delete(AuctionUserEntity aue);
-//	
-//	List<AuctionUserEntity> findByUsernameContains(String filter);
-//}
