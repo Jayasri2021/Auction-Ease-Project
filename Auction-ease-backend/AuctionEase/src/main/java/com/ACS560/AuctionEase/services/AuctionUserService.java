@@ -28,29 +28,3 @@ public interface AuctionUserService
     
     AuctionUserEntity updatAuctionUserById(AuctionUserEntity auctionUser);
 }
-
-//
-//import org.springframework.stereotype.Service;
-//
-//import com.ACS560.AuctionEase.entities.AuctionUserEntity;
-//import com.ACS560.AuctionEase.models.AuctionUser;
-//
-//
-//import java.util.List;
-//import java.util.Optional;
-//
-//@Service
-//public interface AuctionUserService 
-//{
-//    List<AuctionUser> getAllUsers();
-//
-//    Optional<AuctionUser> getUserByUsername(String username);
-//    
-//    AuctionUser updateUser(AuctionUser updateUser);
-//    
-//    AuctionUser createUser(AuctionUser auctionUser);
-//
-//    void deleteUser(String username);
-//		
-//    List<AuctionUserEntity> getAuctionUserFiltered(String filter);
-//}
