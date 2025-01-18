@@ -1,0 +1,43 @@
+-- Insert sample users
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('seller1', 'encryptedpassword', 'seller1@example.com', 'SELLER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('seller2', 'encryptedpassword', 'seller2@example.com', 'SELLER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer1', 'encryptedpassword', 'buyer1@example.com', 'BUYER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer2', 'encryptedpassword', 'buyer2@example.com', 'BUYER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer3', 'encryptedpassword', 'buyer3@example.com', 'BUYER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer4', 'encryptedpassword', 'buyer4@example.com', 'BUYER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('seller3', 'encryptedpassword', 'seller3@example.com', 'SELLER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer5', 'encryptedpassword', 'buyer5@example.com', 'BUYER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('seller4', 'encryptedpassword', 'seller4@example.com', 'SELLER');
+INSERT INTO auction_users (user_name, user_password, email, user_role) VALUES ('buyer6', 'encryptedpassword', 'buyer6@example.com', 'BUYER');
+-- Insert sample auctions
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Antique Vase', 'A beautiful antique vase from the 19th century.', 100.00, '2024-01-01 10:00:00', '2024-01-08 10:00:00', TRUE, 1);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Vintage Watch', 'A rare vintage wristwatch in excellent condition.', 200.00, '2024-01-02 11:00:00', '2024-01-07 11:00:00', TRUE, 2);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Painting', 'An original oil painting by a famous artist.', 500.00, '2024-01-03 12:00:00', '2024-01-13 12:00:00', TRUE, 3);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Classic Car', 'A fully restored classic car from the 1960s.', 15000.00, '2024-01-04 13:00:00', '2024-02-04 13:00:00', TRUE, 1);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Laptop', 'A slightly used laptop with great specifications.', 800.00, '2024-01-05 14:00:00', '2024-01-08 14:00:00', TRUE, 2);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Smartphone', 'Brand new smartphone with cutting-edge features.', 1000.00, '2024-01-06 15:00:00', '2024-01-08 15:00:00', TRUE, 3);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Antique Clock', 'A functional antique clock from the 18th century.', 750.00, '2024-01-07 16:00:00', '2024-01-14 16:00:00', TRUE, 4);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Gaming Console', 'A next-gen gaming console with two controllers.', 600.00, '2024-01-08 17:00:00', '2024-01-13 17:00:00', TRUE, 2);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Jewelry Set', 'An exquisite gold jewelry set with gemstones.', 5000.00, '2024-01-09 18:00:00', '2024-01-24 18:00:00', TRUE, 1);
+INSERT INTO auctions (title, item_description, startingprice, starttime, endtime, auction_status, auction_user_id)VALUES ('Designer Bag', 'A limited edition designer handbag in mint condition.', 3000.00, '2024-01-10 19:00:00', '2024-01-18 19:00:00', TRUE, 4);
+-- Insert sample bids
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (1, 3, 120.00, '2024-01-01T10:15:00'); 
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (1, 4, 150.00, '2024-01-01T10:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (2, 3, 250.00, '2024-01-02T11:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (2, 4, 280.00, '2024-01-02T11:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (3, 3, 550.00, '2024-01-03T12:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (3, 4, 600.00, '2024-01-03T12:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (4, 5, 16000.00, '2024-01-04T13:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (4, 6, 17000.00, '2024-01-04T13:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (5, 3, 850.00, '2024-01-05T14:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (5, 4, 900.00, '2024-01-05T14:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (6, 3, 1100.00, '2024-01-06T15:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (6, 4, 1200.00, '2024-01-06T15:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (7, 5, 800.00, '2024-01-07T16:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (7, 6, 900.00, '2024-01-07T16:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (8, 3, 650.00, '2024-01-08T17:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (8, 4, 700.00, '2024-01-08T17:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (9, 5, 5200.00, '2024-01-09T18:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (9, 6, 5300.00, '2024-01-09T18:30:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (10, 3, 3200.00, '2024-01-10T19:15:00');
+INSERT INTO bids (auction_id, auction_user_id, bid_amount, created_at)VALUES (10, 4, 3400.00, '2024-01-10T19:30:00');
