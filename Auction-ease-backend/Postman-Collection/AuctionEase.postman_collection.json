@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "6fd8f1b8-8c52-45e8-8852-f2b63f19a5a2",
+		"name": "AuctionEase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40184750"
+	},
+	"item": [
+		{
+			"name": "Auctions",
+			"item": [
+				{
+					"name": "Create an Auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"auctionId\": 1001,\r\n    \"title\": \"Marks in SWE\",\r\n    \"description\": \"Very valuable item. Essential for my degree\",\r\n    \"startingPrice\": 1000.0,\r\n    \"startTime\": \"2024-01-01T10:00:00\",\r\n    \"endTime\": \"2024-01-08T10:00:00\",\r\n    \"status\": true,\r\n    \"attendees\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Auctions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auction By Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions/title/Designer Bag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions",
+								"title",
+								"Designer Bag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auction By AuctionId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Auctions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Jewelry Set Maybe\",\r\n    \"description\": \"An exquisite gold jewelry set with gemstones.\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Auction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Perform ETL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctions/etl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctions",
+								"etl"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bids",
+			"item": [
+				{
+					"name": "Add a Bid to an Auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"auctionId\": 4,\r\n    \"bidderId\": 5,\r\n    \"bidAmount\": 150.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids in an Auction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids/auction/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids",
+								"auction",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get highest Bid in an Auction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids/auction/9/highest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids",
+								"auction",
+								"9",
+								"highest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Bid by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bids",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids/auction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids",
+								"auction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auction User",
+			"item": [
+				{
+					"name": "Create a User (Signup)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"seller5\",\r\n    \"password\": \"encryptedpassword\",\r\n    \"email\": \"seller1@example.com\",\r\n    \"role\": \"SELLER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctionusers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctionusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Auction Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctionusers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctionusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search AuctionUser by Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctionusers/seller2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctionusers",
+								"seller2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update AuctionUser Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"updatedSeller\",\r\n    \"password\": \"newpassword\",\r\n    \"email\": \"updatedseller@example.com\",\r\n    \"role\": \"SELLER\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctionusers/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctionusers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete AuctionUser by Username",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AuctionEase/auctionusers/seller4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AuctionEase",
+								"auctionusers",
+								"seller4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kafka Endpoints",
+			"item": [
+				{
+					"name": "Send Bid Updates",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"auctionId\": 1,\r\n    \"bidderId\": 2,\r\n    \"bidAmount\": 150.0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Auctions/bids/updates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Auctions",
+								"bids",
+								"updates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
